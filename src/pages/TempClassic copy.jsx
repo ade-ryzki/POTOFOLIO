@@ -20,79 +20,34 @@ function TempClassic() {
   const myRefOpen = useRef(null);
   const myRefBack = useRef(null);
   const history = useHistory();
-  const [coverPhotoPath, setCoverPhotoPath] = useState();
-
-
 
   useEffect(() => {
     fetchDataImage();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  let album, profile
-
   const fetchDataImage = async () => {
     setIsLoading(true);
-
-    async function fetchAlbum(x) {
-      const res = await axios.get(
-        `${URL_API}/albums/id/${x}
-        `);
-      console.log('album', res.data.result)
-      return res.data.result
-    }
-
-    async function fetchProfile(x) {
-      const res = await axios.get(
-        `${URL_API}/users/profile/userid/${x}
-        ` );
-      console.log('profile', res.data.result)
-      return res.data.result
-    }
-
-    async function fetchCoverPhoto(x) {
-      const res = await axios.get(
-        `${URL_API}/photos/${x}
-        `);
-      console.log('coverPhoto', res.data.result)
-      return res.data.result
-    }
-
     try {
-      album = await fetchAlbum(id)
-      profile = await fetchProfile(album.userId)
-      const coverPhoto = await fetchCoverPhoto(album.coverPhotoId)
-      setCoverPhotoPath(coverPhoto.path)
-
-      // let colImages = res.data.result.collectionImages.filter((item, index) => {
-      //   return index % 2 !== 0;
-      // });
-      // const photos = album.photos
-
-      let colImages = []
-      album.photos.forEach(element => {
-        colImages.push(element.path)
+      let res = await axios.get(
+        `${URL_API}/collection/one?id_collection=${id}`
+      );
+      let colImages = res.data.result.collectionImages.filter((item, index) => {
+        return index % 2 !== 0;
       });
-
-      setUser(profile);
-      setDate(album.createdAt);
-      setCollection(album);
-      // setCollection(album);
+      setUser(res.data.result.user);
+      setDate(res.data.result.date);
+      setCollection(res.data.result);
       setImages(colImages);
-      // setImages(album.photos);
-
       setIsLoading(false);
     } catch (error) {
-      console.log(error.message)
-      dispatch(toastError(`${error.message}`));
+      dispatch(toastError(`${error.response.data.message}`));
       setIsLoading(false);
     }
   };
 
-  
-
   const collectionAllImage = () => {
     return images.map((val, index) => {
-      return <img src={val} alt="" />;
+      return <img src={val.image} alt="" />;
     });
   };
 
@@ -133,19 +88,18 @@ function TempClassic() {
     );
   }
 
-  console.log('RETURRRRNNNNNN')
   return (
     <div className="classic-wrapper">
       <div ref={myRefBack} className="classic-header">
         <div className="ch-background">
-          <img src={coverPhotoPath} alt="imageCover" />
+          <img src={collection.cover} alt="imageCover" />
         </div>
         <div className="ch-info">
           <div className="ch-logo-studioname">
             <div className="ch-logo">
-              <img src={`${user.profilePhoto}`} alt="" />
+              <img src={`${URL_API}${user.photo}`} alt="" />
             </div>
-            <div className="ch-studioname">{user.name}</div>
+            <div className="ch-studioname">{user.businessName}</div>
           </div>
           <div className="ch-title-date">
             <div className="ch-title">{collection.title}</div>
@@ -161,7 +115,7 @@ function TempClassic() {
           <div ref={myRefOpen} className="cm-title-studioname-info">
             <div className="cm-title-studioname">
               <div className="cm-title">{collection.title}</div>
-              <div className="cm-studioname">{user.name}</div>
+              <div className="cm-studioname">{user.businessName}</div>
             </div>
             <div className="cm-info">
               <div className="cursor-pointer">
@@ -192,7 +146,7 @@ function TempClassic() {
             Copyright © 2021 <span>{user.businessName}</span>
           </div>
           <div className="footer-text-bottom">
-            powered by <span>Yp!Photo</span>
+            powered by <span>portraiture</span>
           </div>
         </div>
       </div>

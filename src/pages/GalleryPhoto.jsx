@@ -54,21 +54,13 @@ function GalleryPhoto() {
       setPageNumber(Math.ceil(res.data.result.length / 15));
       setIsLoading(false);
     } catch (error) {
-      dispatch(toastError(`${error.response.data.message}`));
+      // dispatch(toastError(`${error.response.message}`));
       setIsLoading(false);
     }
   };
 
-  const fetchProfile = () => {
-    // return axios.get(`${URL_API}/user`).then((res) => {
-    return axios.get(`${URL_API}/users/profile/userid/${id}`).then((res) => {
-      return res.data.result;
-    });
-  };
-
-  const fetchUser = () => {
-    // return axios.get(`${URL_API}/user`).then((res) => {
-    return axios.get(`${URL_API}/user`).then((res) => {
+  const fetchUser = (idUser) => {
+    return axios.get(`${URL_API}/users/profile/userid/${idUser}`).then((res) => {
       return res.data.result;
     });
   };

@@ -84,12 +84,13 @@ function GalleryAll() {
       var dt = new Date(val.updatedAt);
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       const dtStr = dt.toLocaleDateString(undefined, options);
+      val.theme = 'classic'
       return (
         <div className="galleryall-cards" key={index}>
           <img
             src={val.path}
             alt="NoImageFound"
-            onClick={() => onImageClick(val.id, val.theme)}
+            onClick={() => onImageClick(val.albumId, val.theme)}
           />
           <div
             className="cards-text"

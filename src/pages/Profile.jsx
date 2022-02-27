@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { toastError, toastSuccess, toastWarning } from '../redux/actions/toastActions';
 import HeaderProps from '../components/HeaderProps';
+import jwt_decode from "jwt-decode";
 
 function Profile() {
   const auth = useSelector((state) => state.auth);
@@ -45,11 +46,17 @@ function Profile() {
   //   }
   // };
 
+
   useEffect(() => {
     if (auth.isLogin) {
+
+      const jwtToken = localStorage.getItem('token')
+      const decoded = jwt_decode(jwtToken)
+      console.log('profile decoded', decoded)
+
       setBusinessName(auth.businessName);
       setAddress(auth.address);
-      setEmail(auth.email);
+      setEmail(decoded.email);
       setName(auth.name);
       setPhoto(auth.photo);
       setIsLoading(false);
@@ -70,7 +77,7 @@ function Profile() {
         console.log(respon)
         setBusinessName(respon.name);
         setAddress(respon.address);
-        setEmail(respon.email);
+        // setEmail(respon.email);
         setName(respon.name);
         setPhoto(respon.profilePhoto);
         setIsLoading(false);
@@ -219,13 +226,13 @@ function Profile() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label className="profile-email">Email*</Form.Label>
+            <Form.Label className="profile-email" disabled>Email - cannot be changed here</Form.Label>
             <Form.Control
               className="custom-form-port"
               type="text"
               placeholder={email}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              // onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
           <div className="profile-button-container">
