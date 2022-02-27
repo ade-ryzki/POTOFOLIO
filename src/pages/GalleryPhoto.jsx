@@ -4,6 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import { URL_API } from '../helper/url';
 import { toastError } from '../redux/actions/toastActions';
+import HeaderHome from '../components/HeaderHome';
 import { useDispatch } from 'react-redux';
 import { HiOutlineMail } from 'react-icons/hi';
 import Pagination from '@material-ui/lab/Pagination';
@@ -25,43 +26,30 @@ function GalleryPhoto() {
     fetchDataGalleryPhoto();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  useEffect(() => {
-    let results = [];
-    for (let i = 0; i < image.length; i++) {
-      if (image[i].title.toLowerCase().includes(search)) {
-        results.push(image[i]);
-      }
-    }
-    setImage(results);
-    if (search.length === 0) {
-      setImage(imageBackup);
-    }
-  }, [search]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchDataGalleryPhoto = async () => {
     setIsLoading(true);
     try {
+      console.log(id)
+      // ambil photo
       var res = await axios.get(
-        // `${URL_API}/collection/oneUser?limit=15&page=0&id_user=${id}`
-        `${URL_API}/albums/userid/${id}`
+        `${URL_API}/albums/id/${id}`
       );
-      setImage(res.data.result);
-      setImageBackup(res.data.result);
 
-      let profile = await fetchProfile();
-      setStudioEmail(profile.name);
-      setStudioImage(profile.profilePhoto);
-      setStudioName(profile.name);
+      const response = res.data.result
+      console.log(response)
+      // ambil user
+      let getUser = await fetchUser(response.profile.userId);
+      setStudioImage(getUser.profilePhoto);
+      setStudioName(getUser.name);
+      
+      setImageBackup(response.photos);
+      // setStudioEmail(res.data.email);
+      setImage(response.photos);
 
-      // let getUser = await fetchUser();
-      // for (let i = 0; i < getUser.length; i++) {
-      //   if (getUser[i].id === res.data.result[0].id_user) {
-      //     setStudioEmail(getUser[i].email);
-      //     setStudioImage(getUser[i].photo);
-      //     setStudioName(getUser[i].businessName);
-      //     break;
-      //   }
-      // }
+
+
+
 
       setPageNumber(Math.ceil(res.data.result.length / 15));
       setIsLoading(false);
@@ -91,9 +79,11 @@ function GalleryPhoto() {
       var res = await axios.get(
         `${URL_API}/collection/oneUser?limit=15&page=${value - 1}&id_user=${id}`
       );
+      console.log(res)
       setImage(res.data.result);
     } catch (error) {
-      dispatch(toastError(`${error.response.data.message}`));
+      console.log(error)
+      // dispatch(toastError(`${error.response.data.message}`));
       setIsLoading(false);
     }
   };
@@ -104,19 +94,18 @@ function GalleryPhoto() {
         <div className="gallery-cards">
           <img
             className="cards-img"
-            src={val.cover}
+            src={val.path}
             alt="noImageFound"
             onClick={() => onImageClick(val.id, val.theme)}
           />
           <div className="cards-text">
             <div className="cards-text1">{val.title}</div>
-            <div className="cards-text2">{val.user.businessName}</div>
+
           </div>
         </div>
       );
     });
   };
-
   const onImageClick = (id, theme) => {
     let themeLower = theme.toLowerCase();
     window.location = `/temp/${themeLower}/${id}`;
@@ -125,6 +114,7 @@ function GalleryPhoto() {
   if (isLoading) {
     return (
       <>
+        <HeaderHome />
         <div className="loader"></div>
       </>
     );
@@ -132,14 +122,16 @@ function GalleryPhoto() {
 
   return (
     <>
+     <div className="background-wrapper">
+     <HeaderHome headerHeight={350} />
       <div className="galleryphoto-wrapper">
         <div className="gallery-head">
           <Link className="gallery-link" to="/gallery/all">
-            {<img
+            <img
               className="gallery-logo"
               src={`${studioImage}`}
               alt=""
-            />}
+            />
             <div className="logo-name">{studioName}</div>
           </Link>
           <div className="gallery-search">
@@ -171,6 +163,7 @@ function GalleryPhoto() {
             <HiOutlineMail style={{ marginTop: '-1px' }} /> {studioEmail}
           </div>
         </div>
+      </div>
       </div>
     </>
   );

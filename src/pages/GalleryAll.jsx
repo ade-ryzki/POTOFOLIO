@@ -93,7 +93,7 @@ function GalleryAll() {
           />
           <div
             className="cards-text"
-            onClick={() => onStudioClick(val.userId)}
+            onClick={() => onStudioClick(val.albumId)}
           >
             <div className="cards-text1">{val.title}</div>
             <div className="cards-text2">{val.name}</div>
