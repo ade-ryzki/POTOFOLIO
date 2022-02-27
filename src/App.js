@@ -66,9 +66,9 @@ function App() {
         .catch((err) => {
           console.log(err);
           localStorage.removeItem('token');
-          setTimeout(() => {
-            window.location = '/';
-          }, 2000);
+          // setTimeout(() => {
+          //   window.location = '/';
+          // }, 2000);
         });
 
       // axios

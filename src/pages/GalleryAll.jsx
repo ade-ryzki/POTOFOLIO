@@ -28,7 +28,7 @@ function GalleryAll() {
       // setCollections(res.data.data);
 
       //ini yang server 2
-      let res = await axios.get(`${URL_API}/albums/testing/test`);
+      let res = await axios.get(`${URL_API}/albums/galleryall`);
       console.log(res.data.result)
       setCollections(res.data.result);
       let page = await fetchDataPage();
@@ -44,7 +44,7 @@ function GalleryAll() {
 
   const fetchDataPage = () => {
     return axios
-      .get(`${URL_API}/albums/testing/test`)
+      .get(`${URL_API}/albums/galleryall`)
       .then((res) => {
         return res.data.result;
       })
@@ -57,7 +57,8 @@ function GalleryAll() {
     setPage(value);
     try {
       var res = await axios.get(
-        `${URL_API}/collection?limit=15&page=${value - 1}`
+        // `${URL_API}/collection?limit=15&page=${value - 1}`
+        `${URL_API}/photos/user`
       );
       setCollections(res.data.result);
     } catch (error) {
@@ -76,7 +77,7 @@ function GalleryAll() {
           />
           <div
             className="cards-text"
-            onClick={() => onStudioClick(val.id_user)}
+            onClick={() => onStudioClick(val.albumId)}
           >
             <div className="cards-text1">{val.title}</div>
             <div className="cards-text2">{val.name}</div>

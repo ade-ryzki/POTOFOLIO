@@ -23,7 +23,7 @@ function Login() {
     event.preventDefault();
     setIsLoading(true);
     var data = {
-      username: email,
+      userName: email,
       password: password,
     };
     axios
@@ -31,53 +31,27 @@ function Login() {
       .then((res) => {
         // console.log('Res1', res.data.data)
         dispatch(toastInfo('Please wait getting user data...'));
-
+        
         setTimeout(() => {
           dispatch({
             type: 'LOGIN',
             payload: {
-              id: res.data.data.id,
-              token: res.data.data.token,
-              name: res.data.data.profile.name,
-              businessName: res.data.data.profile.name,
-              photo: res.data.data.profile.profilePhoto,
-              address: res.data.data.profile.address,
-              email: res.data.data.email,
+              id: res.data.result.id,
+              token: res.data.result.token,
+              name: res.data.result.name,
+              address: res.data.result.profile.name,
+              profilePhoto: res.data.result.profile.profilePhoto,
+              coverPhoto: res.data.result.profile.profilePhoto,
+              address: res.data.result.profile.address,
+              email: res.data.result.email,
             },
           });
-          localStorage.setItem('userid', res.data.data.id);
-          localStorage.setItem('token', res.data.data.token);
+          localStorage.setItem('userid', res.data.result.id);
+          localStorage.setItem('token', res.data.result.token);
           window.location = '/homepage';
         }, 2000);
 
-        // var configGetOneUser = {
-        //   headers: { Authorization: `Bearer ${res.data.token}` },
-        // };
-        // axios
-        //   .get(`${URL_API}/users`, configGetOneUser)
-        //   .then((res2) => {
-        //     console.log('Res2', res2)
-        //     dispatch(toastSuccess('You are now logged in!'));
-        //     setTimeout(() => {
-        //       dispatch({
-        //         type: 'LOGIN',
-        //         payload: {
-        //           id: res2.data.result.id,
-        //           token: res.data.token,
-        //           name: res2.data.result.name,
-        //           businessName: res2.data.result.businessName,
-        //           photo: res2.data.result.photo,
-        //           address: res2.data.result.address,
-        //           email: res2.data.result.email,
-        //         },
-        //       });
-        //       localStorage.setItem('token', res.data.token);
-        //     }, 2000);
-        //   })
-        //   .catch((err2) => {
-        //     dispatch(toastError(`${err2.response.data.message}`));
-        //     setIsLoading(false);
-        //   });
+        
       })
       .catch((err) => {
         dispatch(toastError(`${err.response.data.message}`));
