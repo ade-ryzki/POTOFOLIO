@@ -103,7 +103,9 @@ function Profile() {
   };
 
   const onPhotoChange = (e) => {
-    setPicture(URL.createObjectURL(e.target.files[0]));
+    const photoUrl = URL.createObjectURL(e.target.files[0])
+    console.log(photoUrl)
+    setPicture(photoUrl);
     setPhoto(e.target.files[0]);
   };
 
@@ -111,24 +113,24 @@ function Profile() {
     e.preventDefault();
     var bodyFormData = new FormData();
     if (picture) {
-      // bodyFormData.append('photo', photo);
+      bodyFormData.append('photo', photo);
     }
-    const data = {
-      name: name,
-      address: address,
-      photo: photo
-    }
-    // bodyFormData.append('name', name);
+    // const data = {
+    //   name: name,
+    //   address: address,
+    //   photo: photo
+    // }
+    bodyFormData.append('name', name);
     // // bodyFormData.append('businessName', businessName);
-    // bodyFormData.append('address', address);
+    bodyFormData.append('address', address);
     // bodyFormData.append('email', email);
     axios({
       method: 'put',
       url: `${URL_API}/users/profile`,
-      data: data,
+      data: bodyFormData,
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
-        // 'Content-Type': 'multipart/form-data',
+        'Content-Type': 'multipart/form-data',
       },
     })
       .then((res) => {
@@ -226,7 +228,7 @@ function Profile() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label className="profile-email" disabled>Email - cannot be changed here</Form.Label>
+            <Form.Label className="profile-email" disabled>Email</Form.Label>
             <Form.Control
               className="custom-form-port"
               type="text"
