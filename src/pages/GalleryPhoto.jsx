@@ -126,7 +126,7 @@ function GalleryPhoto() {
             />
             <div className="logo-name">{studioName}</div>
           </Link>
-          <div className="gallery-search">
+          {/* <div className="gallery-search">
             <div className="search-input">
               <input
                 type="search"
@@ -138,7 +138,7 @@ function GalleryPhoto() {
             <div className="search-icon">
               <FiSearch size={16} />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="gallery-wrapper">{galleryPhotoImage()}</div>
         <div className="gallery-pagination">
