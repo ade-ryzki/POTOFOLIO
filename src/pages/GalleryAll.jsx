@@ -56,17 +56,6 @@ function GalleryAll() {
     // setCollections(defaultBack);
   };
 
-  // const fetchDataPage = () => {
-  //   return axios
-  //     .get(`${URL_API}/albums/galleryall`)
-  //     .then((res) => {
-  //       return res.data.result;
-  //     })
-  //     .catch((err) => {
-  //       dispatch(toastError(`${err.response.data.message}`));
-  //     });
-  // };
-
   const pageChange = async (event, value) => {
     setPage(value);
     try {
