@@ -150,19 +150,19 @@ function Profile() {
         }
       })
       .catch((err) => {
-        if (err.response.data.message) {
-          console.log(err.response.data.message)
-          if (Array.isArray(err.response.data.message)) {
-            (err.response.data.message).forEach(element => {
-              console.log(element)
-              dispatch(toastError(element));
-
-            });
-            
+        setIsLoading(false);
+        if (true) {
+          if (err.response) {
+            if (err.response.data.message) {
+              dispatch(toastError(err.response.data.message));
+            }
+          } else if (err.request) {
+            console.log(err.request);
+          } else {
+            console.log('Error', err.message);
           }
         }
-        console.log(err.response)
-        
+
       });
   };
 
@@ -234,7 +234,7 @@ function Profile() {
               type="text"
               placeholder={email}
               value={email}
-              // onChange={(e) => setEmail(e.target.value)}
+            // onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
           <div className="profile-button-container">
