@@ -1,6 +1,6 @@
 # Yo!Photo Project
 
-Welcome! This is our final project for the `Glints Part Time Boot Camp` prokect, this website is still in **development**! Built with React, Redux and CSS.
+Welcome! This is our final project for the `Glints Part Time Boot Camp` project, this website is still in **development**! Built with React, Redux and CSS.
 
 ## Installation and Setup Instructions
 
