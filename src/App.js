@@ -20,6 +20,7 @@ import Projects from './pages/Projects';
 import GalleryAll from './pages/GalleryAll';
 import GalleryPhoto from './pages/GalleryPhoto';
 import axios from 'axios';
+import Homepage from './pages/homepage/HomePage';
 import Packages from './pages/Packages';
 import PackagesNew from './pages/PackagesNew';
 import PackagesEdit from './pages/PackagesEdit';
@@ -36,7 +37,6 @@ import 'react-awesome-lightbox/build/style.css';
 import InvoicePreview from './pages/invoices/InvoicePreview';
 import InvoicePaid from './pages/invoices/InvoicePaid';
 import NotLogin from './pages/NotLogin';
-import HomePage from './pages/HomePage';
 import jwt_decode from "jwt-decode";
 
 function App() {
@@ -201,7 +201,8 @@ function App() {
         <Route exact path="/temp/classic/:id" component={TempClassic} />
         <Route exact path="/temp/minimalism/:id" component={TempMinimalism} />
         <Route exact path="/temp/darkmode/:id" component={TempDarkmode} />
-        <Route exact path="/homepage" component={HomePage} />
+        <Route exact path="/homepage" component={Homepage} />
+        
         <Route path="*" component={NotFound} />
       </Switch>
     </>
