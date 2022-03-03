@@ -137,3 +137,24 @@ export const Posts = [
     comment: 12,
   },
 ];
+
+export const Contests = [
+  {
+    id: 1,
+    title: "SPORTS",
+    photo: "assets/contest/1.jpg",
+    date: "2 DAYS LEFT TO ENTER",
+  },
+  {
+    id: 2,
+    title: "NATURE",
+    photo: "assets/contest/2.jpg",
+    date: "3 DAYS LEFT TO ENTER",
+  },
+  {
+    id: 3,
+    title: "ARCHITECTURE",
+    photo: "assets/contest/3.jpg",
+    date: "3 DAYS LEFT TO ENTER",
+  }
+];

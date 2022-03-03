@@ -11,8 +11,11 @@
 }
 
 .homeCover{
-    height: 320px;
+    height: 50px;
+    width: 100%;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .profileCoverImg{
@@ -51,6 +54,7 @@
 }
 
 .homeFeedSidebar{
+    margin-top: 70px;
     display: flex;
-    background-color: #fafafa;
+    background-color: white;
 }

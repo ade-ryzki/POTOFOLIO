@@ -37,25 +37,18 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <div className="port-header-nav">
             <div
-              className={`port-header-collection pr-3 ${
-                page === 'collections' ? 'header-link-active' : null
-              }`}
-            >
-              <Link to="/collections">Collections</Link>
-            </div>
-            <div
               className={`port-header-products pr-3 ${
                 page === 'projects' ? 'header-link-active' : null
               }`}
             >
-              <Link to="/projects">Projects</Link>
+              <Link to="/projects">Contest</Link>
             </div>
             <div
               className={`port-header-package pr-5 ${
                 page === 'packages' ? 'header-link-active' : null
               }`}
             >
-              <Link to="/packages">Packages</Link>
+              <Link to="/gallery/all">Gallery</Link>
             </div>
             <div className="port-header-bell pr-4">
               <span onClick={onNotifClick} className="cursor-pointer">

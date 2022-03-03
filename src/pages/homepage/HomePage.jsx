@@ -7,8 +7,7 @@ export default function Homepage() {
   return (
     <>
             <Header/>
-            <div className="homepage">
-
+            <div className="homepage">    
                 {/* <div className="homeCover">
                     <button className='mb-4 bg-gradient-to-r from-yellow-500 to-black text-white text-2xl px-4 py-2 '>Upload foto </button>
                     <p> Photos uploaded by photographers you follow are added to your feed.</p>
@@ -18,8 +17,6 @@ export default function Homepage() {
                     <Feed/>
                     <Rightbar/>
                 </div>
-                
-                
             </div>
         </>
   )

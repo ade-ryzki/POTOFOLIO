@@ -1,6 +1,7 @@
 import Post from "../Post/Post"
 import "./feed.css";
 import { Posts } from "../../dummyData";
+import { URL_API } from "../../helper/url";
 
 export default function Feed() {
   return (

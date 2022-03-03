@@ -149,7 +149,7 @@ function App() {
           <Route exact path="/invoice/edit/:id" component={NotLogin} />
           <Route exact path="/invoice/preview/:id" component={NotLogin} />
           <Route exact path="/invoice/paid/:id" component={NotLogin} />
-          <Route exact path="/homepage" component={NotLogin} />
+          <Route exact path="/homepage" component={Homepage} />
           <Route path="*" component={NotFound} />
         </Switch>
       </>
