@@ -158,3 +158,42 @@ export const Contests = [
     date: "3 DAYS LEFT TO ENTER",
   }
 ];
+
+export const Entry = [
+  {
+    id: 1,
+    photo: "assets/entries/1.jpg",
+  },
+  {
+    id: 2,
+    photo: "assets/entries/2.jpg",
+  },
+  {
+    id: 3,
+    photo: "assets/entries/3.jpg",
+  },
+  {
+    id: 4,
+    photo: "assets/entries/4.jpg",
+  },
+  {
+    id: 5,
+    photo: "assets/entries/5.jpg",
+  },
+  {
+    id: 6,
+    photo: "assets/entries/6.jpg",
+  },
+  {
+    id: 7,
+    photo: "assets/entries/7.jpg",
+  },
+  {
+    id: 8,
+    photo: "assets/entries/8.jpg",
+  },
+  {
+    id: 9,
+    photo: "assets/entries/9.jpg",
+  },
+];

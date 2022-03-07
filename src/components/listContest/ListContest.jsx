@@ -1,4 +1,4 @@
-import "./contest.css";
+import "./listContest.css";
 
 export default function User({contest}) {
   return (

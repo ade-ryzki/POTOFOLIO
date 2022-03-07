@@ -1,7 +1,7 @@
 import "./rightbar.css";
 import { Users , Contests } from "../../dummyData";
 import User from "../user/User"
-import Contest from "../contest/Contest"
+import ListContest from "../listContest/ListContest"
 
 export default function Rightbar() {
   const HomeRightbar = () => {
@@ -25,7 +25,7 @@ export default function Rightbar() {
         <hr className="rightbarHr" />
         <ul className="rightbarUserList">
           {Contests.map((u) => (
-            <Contest key={u.id} contest={u} />
+            <ListContest key={u.id} contest={u} />
           ))}
         </ul>
         

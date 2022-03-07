@@ -38,6 +38,7 @@ import InvoicePreview from './pages/invoices/InvoicePreview';
 import InvoicePaid from './pages/invoices/InvoicePaid';
 import NotLogin from './pages/NotLogin';
 import jwt_decode from "jwt-decode";
+import Contest from "./pages/contest/Contest"
 
 function App() {
   const dispatch = useDispatch();
@@ -150,6 +151,7 @@ function App() {
           <Route exact path="/invoice/preview/:id" component={NotLogin} />
           <Route exact path="/invoice/paid/:id" component={NotLogin} />
           <Route exact path="/homepage" component={Homepage} />
+          <Route exact path="/contest" component={Contest} />
           <Route path="*" component={NotFound} />
         </Switch>
       </>
