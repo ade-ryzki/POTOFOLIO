@@ -11,6 +11,8 @@ export default function Post({post}) {
         setlike(isLiked ? like -1 : like+1)
         setIsLiked(!isLiked)
     }
+
+    
   return (
     <div className="post" >
         <div className="postWrapper">
