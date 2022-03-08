@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const Users = [
   {
     id:1,
@@ -197,3 +199,11 @@ export const Entry = [
     photo: "assets/entries/9.jpg",
   },
 ];
+
+// export const fetchDataImage = async () => {
+//   async function fetchAllPhoto() {
+//     const res = await axios.get(
+      
+//     )
+//   }
+// }
