@@ -16,7 +16,7 @@ function HeaderHome(props) {
       localStorage.removeItem('token');
       dispatch({
         type: 'LOGOUT',
-      });
+      }); window.location = '/';
     }, 2000);
   };
 
