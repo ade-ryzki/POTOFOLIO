@@ -94,58 +94,58 @@ function Home() {
         <div className='grid grid-cols-2 md:grid-cols-4 p-3 h-full bg-gradient-to-tl from-black via-indigo-200 to-sky-800 gap-5'>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Animal</p>
-            <img 
-            src={animal} 
-            alt="Animal" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={animal}
+              alt="Animal"
+              className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Architecture</p>
-            <img 
-            src= {architecture}
-            alt="Architecture" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={architecture}
+              alt="Architecture"
+              className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Bw</p>
-            <img 
-            src={bw}
-            alt="BW" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={bw}
+              alt="BW"
+              className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Nature</p>
-            <img 
-            src={nature}
-            alt="Nature" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={nature}
+              alt="Nature"
+              className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Sport</p>
-            <img 
-            src={sport}
-            alt="Sport" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={sport}
+              alt="Sport"
+              className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Bridge</p>
-            <img 
-            src={bridge}
-            alt="Bridge" className='absolute w-full h-52 object-cover' />
+            <img
+              src={bridge}
+              alt="Bridge" className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Still-life</p>
-            <img 
-            src={still}
-            alt="still" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={still}
+              alt="still"
+              className='absolute w-full h-52 object-cover' />
           </div>
           <div className="relative flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Automotive</p>
-            <img 
-            src={automotive}
-            alt="Automotive" 
-            className='absolute w-full h-52 object-cover' />
+            <img
+              src={automotive}
+              alt="Automotive"
+              className='absolute w-full h-52 object-cover' />
           </div>
         </div>
         <div className='flex items-center justify-center py-4'>
@@ -158,7 +158,7 @@ function Home() {
           <div className="relative -top-8 flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>Sport</p>
             <img src="https://s3-alpha-sig.figma.com/img/805b/9b02/d91056da8ccd5814780943654ff5c041?Expires=1646611200&Signature=UTY3j6JSz93n4Lrxl5f3DR6EJoELezit~o8GPA7yLf2iQ8A7GcEeXIZZaUebtxoRqlh0R16bGHkBmdLDA20S7vUzAoAt~xp~L8~rLXfWwil2-NDUqu4dtU5QSxi47bWoPWsbILdo5X8HKbVxGvl~K9S-3PUOJR6KboUyTpvpPltlT~FwYBO0a9p~1qa1TABHw5j97K1gqN4Sq3mamw~VrN5a1cRCTooLDb3zDB~Zo1Zejo0JeKsHL8QNyLzgdNabTWy-rBLXLT-K7g5Yoqlbz-Itd0uY~X35PJJFVsZgdDqOB9tqsfAKbf4Q-rpB5BeIgCuzgmzL3TLKeQ-VPviUpw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Sports" className='absolute w-full h-52 object-cover' />
-                <img src={IconAward} alt="Icon Award" className=' z-10 absolute bottom-0 right-auto w-16 h-16' />
+            <img src={IconAward} alt="Icon Award" className=' z-10 absolute bottom-0 right-auto w-16 h-16' />
           </div>
           <div className="relative -top-8 flex items-center justify-center h-52 bg-white text-nav-1">
             <p className='z-10 text-center text-white font-bold'>People</p>
