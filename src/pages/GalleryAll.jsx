@@ -4,7 +4,7 @@ import { URL_API } from '../helper/url';
 import { toastError } from '../redux/actions/toastActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import HeaderHome from '../components/HeaderHome';
+import HeaderHome from '../components/HeaderHome';  
 import Footer from '../components/Footer';
 import Pagination from '@material-ui/lab/Pagination';
 import HeaderLogin from './../components/HeaderLogin';
@@ -57,17 +57,6 @@ function GalleryAll() {
 
     // setCollections(defaultBack);
   };
-
-  // const fetchDataPage = () => {
-  //   return axios
-  //     .get(`${URL_API}/albums/galleryall`)
-  //     .then((res) => {
-  //       return res.data.result;
-  //     })
-  //     .catch((err) => {
-  //       dispatch(toastError(`${err.response.data.message}`));
-  //     });
-  // };
 
   const pageChange = async (event, value) => {
     setPage(value);
@@ -126,11 +115,9 @@ function GalleryAll() {
   }
 
   return (
-
     <div className="background-wrapper">
-      {/* <HeaderHome headerHeight={350} />  */}
       {
-         auth.isLogin ? <HeaderLogin /> : (<HeaderHome headerHeight={165} />)
+        auth.isLogin ? <HeaderLogin /> : (<HeaderHome headerHeight={165} />)
       }
       <div className="galleryall-wrapper">
         <div className="gallery-title">Explore Photographer Gallery</div>

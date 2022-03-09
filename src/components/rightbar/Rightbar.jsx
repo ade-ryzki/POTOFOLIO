@@ -1,5 +1,5 @@
 import "./rightbar.css";
-import { Users , Contests } from "../../dummyData";
+import { Users, Contests } from "../../dummyData";
 import User from "../user/User"
 import ListContest from "../listContest/ListContest"
 
@@ -28,15 +28,15 @@ export default function Rightbar() {
             <ListContest key={u.id} contest={u} />
           ))}
         </ul>
-        
-        
+
+
       </>
     );
   };
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        <HomeRightbar/>
+        <HomeRightbar />
       </div>
     </div>
   );

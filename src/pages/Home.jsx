@@ -2,15 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import HeaderHome from '../components/HeaderHome';
-// import HomeMini from '../assets/img/home/minimalist1.png';
-// import HomeClass from '../assets/img/home/home-classic.png';
-// import HomeDark from '../assets/img/home/home-dark.png';
-// import HomeLaptop from '../assets/img/home/home-laptop.png';
-// import Home9 from '../assets/img/home/home-image9.png';
-// import Collection from '../assets/img/home/collection.png';
-// import Projects from '../assets/img/home/projects.png';
-// import Package from '../assets/img/home/package.png';
-
 import IconAward from '../assets/img/icon-award.png';
 import IconCommunity from '../assets/img/icon-community.png';
 import IconReview from '../assets/img/icon-review.png';
@@ -26,14 +17,13 @@ import sport1 from '../assets/img/home/sport1.png';
 import people from '../assets/img/home/people.png';
 import cars1 from '../assets/img/home/cars1.png';
 import city from '../assets/img/home/city.png';
-
 import Footer from '../components/Footer';
 import { useSelector } from 'react-redux';
 import HeaderLogin from './../components/HeaderLogin';
 
 
 function Home() {
-  const [image, setImage] = useState('');
+  // const [image, setImage] = useState('');
   const [toastPop, setToastPop] = useState(false);
   const auth = useSelector((state) => state.auth); //update header login
 
@@ -160,7 +150,9 @@ function Home() {
           </div>
         </div>
         <div className='flex items-center justify-center py-4'>
-          <button className='bg-gradient-to-r from-yellow-500 to-black text-white text-4xl px-3 py-2 '>See more open contest</button>
+          <button className='bg-gradient-to-r from-yellow-500 to-black text-white text-4xl px-3 py-2 '>
+            See more open contest
+          </button>
         </div>
         <div className='flex items-center justify-center py-4 mb-8'>
           <p className='text-lg font-bold text-yellow-600 md:text-4xl'>
@@ -215,7 +207,9 @@ function Home() {
         </div>
         <div className='flex items-center justify-center py-4 m-3'>
           <button className='bg-gradient-to-r from-yellow-500 to-black text-white text-3xl px-5 py-1 '>
-            <Link to="/gallery/all">Gallery</Link>
+            <Link to="/gallery/all">
+              Gallery
+            </Link>
           </button>
         </div>
         <div className='justify-center bg-right-top bg-cover h-nav3 mb-20'>
@@ -226,7 +220,11 @@ function Home() {
             <p className='w-screen text-center'>one place. </p>
           </div>
           <div className='flex items-center justify-center'>
-            <button className='bg-gradient-to-r from-yellow-500 to-black text-white text-3xl px-5 py-1 '><Link to="/register">Sign up now</Link></button>
+            <button className='bg-gradient-to-r from-yellow-500 to-black text-white text-3xl px-5 py-1 '>
+              <Link to="/register">
+                Sign up now
+              </Link>
+            </button>
           </div>
         </div>
       </div>

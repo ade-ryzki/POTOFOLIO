@@ -45,6 +45,7 @@ function HeaderHome(props) {
             <div className="hhome-nav">
               <div className="hhome-product pr-3">
                 <a href="/#product">Contest</a>
+                {/* <a>Contest</a> */}
               </div>
               <div className="hhome-gallery pr-5">
                 <Link to="/gallery/all">Gallery</Link>

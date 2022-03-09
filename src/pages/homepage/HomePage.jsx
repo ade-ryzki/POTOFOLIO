@@ -2,11 +2,12 @@ import "./homepage.css"
 import Feed from "../../components/feed/Feed";
 import Rightbar from "../../components/rightbar/Rightbar";
 import Header from "../../components/Header";
+import HeaderLogin from './../../components/HeaderLogin';
 
 export default function Homepage() {
     return (
         <>
-            <Header />
+            <HeaderLogin />
             <div className="homepage">
                 {/* <div className="homeCover">
                     <button className='mb-4 bg-gradient-to-r from-yellow-500 to-black text-white text-2xl px-4 py-2 '>Upload foto </button>

@@ -5,9 +5,10 @@ import { Link, useParams } from 'react-router-dom';
 import { URL_API } from '../helper/url';
 import { toastError } from '../redux/actions/toastActions';
 import HeaderHome from '../components/HeaderHome';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { HiOutlineMail } from 'react-icons/hi';
 import Pagination from '@material-ui/lab/Pagination';
+import HeaderLogin from './../components/HeaderLogin';
 
 function GalleryPhoto() {
   const { id } = useParams();
@@ -21,7 +22,7 @@ function GalleryPhoto() {
   const [studioImage, setStudioImage] = useState(false);
   const [studioEmail, setStudioEmail] = useState('');
   const dispatch = useDispatch();
-
+  const auth = useSelector((state) => state.auth);
   useEffect(() => {
     fetchDataGalleryPhoto();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -42,7 +43,7 @@ function GalleryPhoto() {
       let getUser = await fetchUser(response.profile.userId);
       setStudioImage(getUser.profilePhoto);
       setStudioName(getUser.name);
-      
+
       setImageBackup(response.photos);
       // setStudioEmail(res.data.email);
       setImage(response.photos);
@@ -114,48 +115,50 @@ function GalleryPhoto() {
 
   return (
     <>
-     <div className="background-wrapper">
-     <HeaderHome headerHeight={350} />
-      <div className="galleryphoto-wrapper">
-        <div className="gallery-head">
-          <Link className="gallery-link" to="/gallery/all">
-            <img
-              className="gallery-logo"
-              src={`${studioImage}`}
-              alt=""
-            />
-            <div className="logo-name">{studioName}</div>
-          </Link>
-          <div className="gallery-search">
-            <div className="search-input">
-              <input
-                type="search"
-                placeholder="Search gallery"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
+      <div className="background-wrapper">
+        {
+          auth.isLogin ? <HeaderLogin /> : (<HeaderHome headerHeight={165} />)
+        }
+        <div className="galleryphoto-wrapper">
+          <div className="gallery-head">
+            <Link className="gallery-link" to="/gallery/all">
+              <img
+                className="gallery-logo"
+                src={`${studioImage}`}
+                alt=""
               />
+              <div className="logo-name">{studioName}</div>
+            </Link>
+            <div className="gallery-search">
+              <div className="search-input">
+                <input
+                  type="search"
+                  placeholder="Search gallery"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+              </div>
+              <div className="search-icon">
+                <FiSearch size={16} />
+              </div>
             </div>
-            <div className="search-icon">
-              <FiSearch size={16} />
+          </div>
+          <div className="gallery-wrapper">{galleryPhotoImage()}</div>
+          <div className="gallery-pagination">
+            <Pagination
+              count={pageNumber}
+              page={page}
+              onChange={pageChange}
+              shape="rounded"
+            />
+          </div>
+          <div className="gallery-footer">
+            <div className="gallery-footer-contact">Contact {studioName}</div>
+            <div className="gallery-footer-email">
+              <HiOutlineMail style={{ marginTop: '-1px' }} /> {studioEmail}
             </div>
           </div>
         </div>
-        <div className="gallery-wrapper">{galleryPhotoImage()}</div>
-        <div className="gallery-pagination">
-          <Pagination
-            count={pageNumber}
-            page={page}
-            onChange={pageChange}
-            shape="rounded"
-          />
-        </div>
-        <div className="gallery-footer">
-          <div className="gallery-footer-contact">Contact {studioName}</div>
-          <div className="gallery-footer-email">
-            <HiOutlineMail style={{ marginTop: '-1px' }} /> {studioEmail}
-          </div>
-        </div>
-      </div>
       </div>
     </>
   );
