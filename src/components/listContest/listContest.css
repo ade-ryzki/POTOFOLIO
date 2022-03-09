@@ -23,8 +23,9 @@
       transform: translate(-50%, -50%);
   }
   .rightbarTitle{
-    display: block;
+    display: inline;
     height: 50%;
+    
   }
 
   .righbarDate{

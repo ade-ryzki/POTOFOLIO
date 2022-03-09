@@ -42,6 +42,7 @@
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
+    display: block;
   }
   .rightbarSeeAll{
     font-size: 12px;

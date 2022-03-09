@@ -26,7 +26,7 @@ function Dashboard() {
   const history = useHistory();
   const dispatch = useDispatch();
 
-//dummy data variable baru
+  //dummy data variable baru
 
   useEffect(() => {
     if (localStorage.getItem('token')) {

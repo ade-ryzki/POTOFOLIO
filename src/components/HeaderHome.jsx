@@ -28,6 +28,7 @@ function HeaderHome(props) {
     }
   };
 
+
   window.addEventListener('scroll', changeBackground);
 
   return (
