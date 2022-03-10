@@ -43,7 +43,7 @@ export default function UserCard ({post}) {
     <div className="userCard" >
         
         <div className="cardWrapper">
-            <div className="postTop">
+            <div className="cardTop">
                 <img 
                 className="UserImg" 
                 src={collections} 

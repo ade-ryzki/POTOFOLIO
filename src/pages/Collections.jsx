@@ -55,6 +55,7 @@ function Collections() {
       if (res.data.result.length) {
         setDataCollections(res.data.result.reverse());
         setDataBackup(res.data.result);
+        
       }
       setIsLoading(false);
     } catch (error) {

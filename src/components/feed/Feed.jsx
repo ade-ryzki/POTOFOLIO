@@ -17,7 +17,7 @@ export default function Feed() {
 
   const fetchDataAllPhotos = async () => {
     try{
-      const res = await axios.get(`${URL_API}/photos?limit=5`)
+      const res = await axios.get(`${URL_API}/photos?limit=100`)
       const photosAll = res.data.result
       console.log(photosAll)
       setCollections(photosAll)

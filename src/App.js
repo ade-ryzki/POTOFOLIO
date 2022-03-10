@@ -134,7 +134,7 @@ function App() {
           <Route exact path="/temp/darkmode/:id" component={TempDarkmode} />
           <Route exact path="/privacy/:id" component={Privacy} />
           <Route exact path="/download/:id" component={Download} />
-          <Route exact path="/collections" component={NotLogin} />
+          <Route exact path="/collections" component={Collections} />
           <Route exact path="/collections/new" component={NotLogin} />
           <Route exact path="/collections/edit/:id" component={NotLogin} />
           <Route exact path="/testing" component={NotLogin} />
@@ -206,6 +206,7 @@ function App() {
         <Route exact path="/temp/minimalism/:id" component={TempMinimalism} />
         <Route exact path="/temp/darkmode/:id" component={TempDarkmode} />
         <Route exact path="/homepage" component={Homepage} />
+        <Route exact path="/contest" component={Contest} />
         <Route exact path="/user/all" component={UserAll}/>
         
         <Route path="*" component={NotFound} />
