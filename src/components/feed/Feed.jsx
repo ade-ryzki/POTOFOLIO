@@ -19,7 +19,7 @@ export default function Feed() {
     try{
       const res = await axios.get(`${URL_API}/photos?limit=5`)
       const photosAll = res.data.result
-
+      console.log(photosAll)
       setCollections(photosAll)
     } catch (error) {
       if (error.response) {

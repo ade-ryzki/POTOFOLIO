@@ -39,6 +39,7 @@ import InvoicePaid from './pages/invoices/InvoicePaid';
 import NotLogin from './pages/NotLogin';
 import jwt_decode from "jwt-decode";
 import Contest from "./pages/contest/Contest"
+import UserAll from './pages/userAll/UserAll';
 
 function App() {
   const dispatch = useDispatch();
@@ -152,6 +153,7 @@ function App() {
           <Route exact path="/invoice/paid/:id" component={NotLogin} />
           <Route exact path="/homepage" component={Homepage} />
           <Route exact path="/contest" component={Contest} />
+          <Route exact path="/user/all" component={UserAll}/>
           <Route path="*" component={NotFound} />
         </Switch>
       </>
@@ -204,6 +206,7 @@ function App() {
         <Route exact path="/temp/minimalism/:id" component={TempMinimalism} />
         <Route exact path="/temp/darkmode/:id" component={TempDarkmode} />
         <Route exact path="/homepage" component={Homepage} />
+        <Route exact path="/user/all" component={UserAll}/>
         
         <Route path="*" component={NotFound} />
       </Switch>
