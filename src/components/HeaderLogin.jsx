@@ -40,8 +40,7 @@ function HeaderLogin() {
             <div className={`port-header-products pr-3 ${page === 'projects' ? 'header-link-active' : null}`}>
               <Link to="/projects">Contest</Link>
             </div>
-            <div className={`port-header-package pr-5 ${page === 'packages' ? 'header-link-active' : null}`}
-            >
+            <div className={`port-header-package pr-5 ${page === 'packages' ? 'header-link-active' : null}`}>
               <Link to="/gallery/all">Gallery</Link>
             </div>
             <div className="port-header-user pr-5">
