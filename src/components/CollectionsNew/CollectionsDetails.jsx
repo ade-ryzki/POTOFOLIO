@@ -23,6 +23,8 @@ function CollectionsDetails(props) {
             type="date"
             placeholder="Select date"
             value={props.date}
+
+            
             onChange={props.dateChange}
           />
         </Form.Group>

@@ -146,19 +146,106 @@ export const Contests = [
     title: "SPORTS",
     photo: "assets/contest/1.jpg",
     date: "2 DAYS LEFT TO ENTER",
+    // brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
   },
   {
     id: 2,
     title: "NATURE",
     photo: "assets/contest/2.jpg",
     date: "3 DAYS LEFT TO ENTER",
+    // brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
   },
   {
     id: 3,
     title: "ARCHITECTURE",
     photo: "assets/contest/3.jpg",
     date: "3 DAYS LEFT TO ENTER",
-  }
+    // brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  },
+  // {
+  //   id: 4,
+  //   title: "POTRAIT",
+  //   photo: "assets/contest/4.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 5,
+  //   title: "STILL-LIFE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // },
+  // {
+  //   id: 3,
+  //   title: "ARCHITECTURE",
+  //   photo: "assets/contest/3.jpg",
+  //   date: "3 DAYS LEFT TO ENTER",
+  //   brief: `Welcome to Portraiture’s ‘${Contests.title}’ contest for New Joiners! These contests are a chance for new members to introduce their photography to the community, and get a taste of how Portraiture contests work. They can be entered by anyone within their first 28 days of joining Portraiture. After 100 images have been submitted the contest closes and the Crowd will start rating the images. The Expert Judge will also be judging the images and writing reviews at the same time. All the winners, both Crowd and Expert, will be announced after 3 days of judging. Make sure you also check out our two other New Joiners contests - ‘Animals’ and ‘Landscapes’.`
+  // }
 ];
 
 export const Entry = [

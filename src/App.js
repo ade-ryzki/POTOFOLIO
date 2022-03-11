@@ -155,7 +155,7 @@ function App() {
           <Route exact path="/homepage" component={Homepage} />
           <Route exact path="/contest" component={Contest} />
           <Route exact path="/user/all" component={UserAll}/>
-          {/* <Route exact path="/upload" component={Upload}/> */}
+          <Route exact path="/upload" component={Upload}/>
           <Route path="*" component={NotFound} />
         </Switch>
       </>
@@ -210,7 +210,7 @@ function App() {
         <Route exact path="/homepage" component={Homepage} />
         <Route exact path="/contest" component={Contest} />
         <Route exact path="/user/all" component={UserAll}/>
-        {/* <Route exact path="/upload" component={Upload}/> */}
+        <Route exact path="/upload" component={Upload}/>
         
         <Route path="*" component={NotFound} />
       </Switch>
