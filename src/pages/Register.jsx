@@ -27,7 +27,7 @@ function Login() {
     var data = {
       email: email,
       password: password,
-      username: name,
+      userName: name,
     };
     // const response = await axios.post(`${URL_API}/users/signup`, data);
     // console.log(response);
@@ -37,13 +37,13 @@ function Login() {
         dispatch(
           toastSuccess('Success! You are now logged in with your new account!')
         );
-        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('token', res.data.result.token);
         setTimeout(() => {
-          window.location = '/HomePage';
+          window.location = '/homepage';
         }, 3000);
       })
       .catch((err) => {
-        console.log(err.response.data)
+        console.log(err.response.result)
         dispatch(toastError(`${err.response.data.message}`));
         setIsLoading(false);
       });
@@ -99,7 +99,7 @@ function Login() {
                   required
                   type="password"
                   value={password}
-                  placeholder="********"
+                  placeholder=""
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Group>

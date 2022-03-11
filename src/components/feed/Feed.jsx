@@ -6,6 +6,7 @@ import axios from "axios";
 import { toastError } from "../../redux/actions/toastActions";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import Share from "../share/Share";
 
 export default function Feed() {
   const [collections, setCollections] = useState([])
@@ -41,6 +42,7 @@ export default function Feed() {
           Remember your photos will appear in your followers’ feeds too. A great way to get your work out there
           </p>
         </div>
+        {/* <Share/> */}
         {collections.map((p) => (
           <Post key={p.id} post={p} />
         ))}

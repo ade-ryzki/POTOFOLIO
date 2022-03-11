@@ -16,6 +16,7 @@ import { dateFormatter } from '../helper/dateformatter';
 import Header from '../components/Header';
 import axios from 'axios';
 import SimplePopover from '../components/Popover/SimplePopover';
+import HeaderLogin from '../components/HeaderLogin';
 
 function Dashboard() {
   const auth = useSelector((state) => state.auth);
@@ -304,7 +305,7 @@ function Dashboard() {
 
   return (
     <>
-      <Header />
+      <HeaderLogin />
       <div className="dashboard-wrapper">
         <div className="dashboard-background">
           <div className="dashboard-background-container">
